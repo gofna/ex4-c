@@ -16,16 +16,12 @@ int main(int argc , char *argv[])
 { 
 
 char send[LINE] = {0}; // the word to add
-	char txt[1024];
+char txt[1024];
 fgets(txt, 1024, stdin); // to scan the text
-printf("gofna");
+
 node *n =  getNode(); // the root
 
-
-
-	
 int j = 0;
-
 for( int i = 0 ; i < strlen(txt) ; i++){
 
 	if(txt[i] == ' ' || txt[i] == '\n' ){ 
@@ -42,12 +38,13 @@ for( int i = 0 ; i < strlen(txt) ; i++){
 
 
 char temp[LINE];
-if(*(argv[1]) == 'r'){
-print(n, temp, 0, true);
-}
-else{
-print(n, temp, 0 ,false);
-}
+
+ if(argc > 1 && *(argv[1]) == 'r'){
+ print(n, temp, 0, true);
+ }
+ else{
+ print(n, temp, 0 ,false);
+ }
 
 deleteTrie(n);
 	
