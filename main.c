@@ -17,12 +17,13 @@ int main(int argc , char *argv[])
 
 char send[LINE] = {0}; // the word to add
 char txt[1024];
-fgets(txt, 1024, stdin); // to scan the text
+
 
 node *n =  getNode(); // the root
 
 int j = 0;
-for( int i = 0 ; i < strlen(txt) ; i++){
+while(fgets(txt, 1024, stdin)){
+ for( int i = 0 ; i < strlen(txt) ; i++){
 
 	if(txt[i] == ' ' || txt[i] == '\n' ){ 
 		send[j] = '\0';
@@ -34,8 +35,8 @@ for( int i = 0 ; i < strlen(txt) ; i++){
 		send[j] = txt[i];
 		j++;
 	}
+ }
 }
-
 
 char temp[LINE];
 
