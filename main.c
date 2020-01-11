@@ -36,6 +36,7 @@ while(fgets(txt, 1024, stdin)){
 		j++;
 	}
  }
+ memset(txt,0,sizeof(txt));
 }
 
 char temp[LINE];
