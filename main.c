@@ -25,7 +25,7 @@ int j = 0;
 while(fgets(txt, 1024, stdin)){
  for( int i = 0 ; i < strlen(txt) ; i++){
 	
-	if(txt[i] >= 'a' && txt[i] <= 'z' || txt[i] >= 'A' && txt[i] <= 'Z'){
+    if(txt[i] >= 'a' && txt[i] <= 'z' || txt[i] >= 'A' && txt[i] <= 'Z'){
 	 	
 	if(txt[i] == ' ' || txt[i] == '\n' ){ 
 		send[j] = '\0';
@@ -37,9 +37,8 @@ while(fgets(txt, 1024, stdin)){
 		send[j] = txt[i];
 		j++;
 	}
-  }
+    }
  }
- memset(txt,0,sizeof(txt));
 }
 
 char temp[LINE];
